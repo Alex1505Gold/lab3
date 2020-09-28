@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <ctime>
-
+#include <string>
 int main()
 {
     //zadanie 1
@@ -69,6 +69,22 @@ int main()
     for (int i = 0; i < vec1.size(); ++i) std::cout << vec1[i] << " ";
     std::cout << std::endl;
     //zadanie 4
+    std::string str1;
+    std::cin.ignore(10, '\n');
+    std::getline(std::cin, str1);
+    std::cout << str1 << std::endl;
+    int kolvo0 = 0;
+    for (int i = 0; i < str1.size(); ++i)
+        if (str1[i] == '0') kolvo0++;
+    std::cout << "dlina stroli ravna " << str1.size() << ", dolya 0 ravna " << kolvo0 * 1.0 / str1.size() <<std::endl;
+    std::cout << "vvedi l1 i l2" << std::endl;
+    int l1, l2;
+    std::cin >> l1 >> l2;
+    std::cout << str1.substr(l1, l2) << std::endl;
+    std::string str2 = "Can you can a can as a canner can can a can";
+    std::string str3;
+    std::cin.ignore(10, '\n');
+    std::getline(std::cin, str3);
 
 }
 
